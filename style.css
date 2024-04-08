@@ -1,0 +1,185 @@
+/* Add CSS here */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Syne+Mono&display=swap');
+/*===== VARIABLES CSS =====*/
+
+:root {
+    --h1-fs: 2rem;    --h1-fs-media: 3rem; 
+    --h2-fs: 1.5rem;  --h2-fs-media: 2rem;
+    --h3-fs: 1.3rem;  --h3-fs-media: 1.8rem;
+    --h4-fs: 1.1rem;  --h4-fs-media: 1.5rem;
+    --p-fs: .85rem;    --p-fs-media: 1.1rem;
+    --a-fs: .65rem;    --a-fs-media: 1.1rem;
+    --li-fs: .7rem;   --li-fs-media: 1.1rem;    
+
+    --clr-bg-main: #f3f9fe;
+    --clr-bg-pri: #121637;
+    --clr-bg-sec: #b4d4fb;
+    --clr-acc-main: #e4eefa;
+    --clr-acc-pri: #4868ad;
+    --clr-acc-sec:  #1e2b4b;
+    --clr-acc-thi: #2e67a9;
+    --clr-acc-four: #ad0000;
+    --clr-acc-fif: #e03333;
+    --clr-text-main: #67696a;
+    --clr-text-pri: #36454F;  
+    
+    --shadow-color: #33cbb8;    
+    --main-ff: 'Poppins', sans-serif;
+  }
+
+/*===== BASE =====*/
+
+*,
+::before,
+::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: var(--main-ff);
+    font-size: var(--p-fs);
+    background: var(--clr-bg-main);
+    color: var(--clr-acc-sec);
+    width: 100%;
+    min-height: 100vh;
+}   
+
+h1, h2, h3, h4,
+p, a, li {
+    margin: 0;
+}
+
+h1 {font-size: var(--h1-fs);}
+h2 {font-size: var(--h2-fs);}
+h3 {font-size: var(--h3-fs);}
+h4 {font-size: var(--h4-fs);}
+
+p, a, li {font-size: var(--p-fs);}
+span {font-size: var(--a-fs);}
+
+ul {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    color: var(--clr-text-main);
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+@keyframes scaleUp {
+    from {
+        opacity: 0;
+        transform: scale(0);
+    }
+
+    to {
+        opacity: 1;
+        transform: scale(1);
+
+    }
+}
+    /* animation: scaleUp 1s ease-in-out;
+    transform-origin: center center; */
+
+/*===== BUTTONS =====*/
+
+.btn {
+    display: inline-block;
+    background-color:  var(--clr-acc-pri);
+    color: #fff;
+    padding: .7rem 1.5rem;
+    margin: 1rem auto;
+    width: 100%;
+    font-weight: 600;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    white-space: nowrap;
+    transition: .2s;
+}
+
+
+.btn:last-of-type {
+    background-color: var(--clr-acc-sec);
+
+}
+
+.btn:first-of-type:hover {
+    background-color: var(--clr-acc-sec);
+}
+
+.btn:last-of-type:hover {
+    background-color:  var(--clr-acc-pri);
+
+}
+
+.btn:active {
+    scale: .97;
+}
+
+/*===== PROJECT CSS =====*/
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container {
+    width: 400px;
+    padding: 3rem 4rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    animation: scaleUp 1s ease-in-out;
+    transform-origin: center center;
+    text-align: center;
+    background-color:#fff;
+    outline: 1.5rem solid var(--clr-acc-main);
+    border-radius: .6rem;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+
+}
+
+h3 {
+    margin-bottom: 1rem;
+}
+
+.submit > p:first-of-type {
+    margin-bottom: 1rem;
+}
+
+.submit > p:nth-of-type(2) {
+    margin-bottom: 1rem;
+}
+
+.name {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: .5rem;
+}
+
+.container input {
+    margin: .5rem auto;
+    color: var(--clr-text-main);
+    width: 100%;
+    padding: .6rem;
+    border-radius: .2rem;
+    outline: none;
+    border: 1px solid lightgray;
+}
